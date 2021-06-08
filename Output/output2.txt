@@ -1,40 +1,31 @@
 Solutie: 
+
+Id nod: 1
 0: 5 4 rosu
 1: 3 0 verde
 2: 5 1 albastru
 
-Din vasul 2 s-au turnat 1 litri de apa de culoare albastru in vasul 0.
+
+Id nod: 4
+Din vasul 2 s-au turnat 1 litri de apa de culoare albastru in vasul 0
 0: 5 5 mov
 1: 3 0 verde
 2: 5 0 
 
-Din vasul 0 s-au turnat 3 litri de apa de culoare mov in vasul 1.
+
+Id nod: 10
+Din vasul 0 s-au turnat 3 litri de apa de culoare mov in vasul 1
 0: 5 2 mov
 1: 3 3 maro
 2: 5 0 
 
 Cost: 26
 Lungime: 3
-Timp solutie: 7ms
+Timp solutie: 11ms
 
 ----------------
-Solutie: 
-0: 5 4 rosu
-1: 3 0 verde
-2: 5 1 albastru
 
-Din vasul 0 s-au turnat 4 litri de apa de culoare rosu in vasul 2.
-0: 5 0 
-1: 3 0 verde
-2: 5 5 mov
+Numarul maxim de noduri in memorie la un moment dat: 188
 
-Din vasul 2 s-au turnat 3 litri de apa de culoare mov in vasul 1.
-0: 5 0 
-1: 3 3 maro
-2: 5 2 mov
-
-Cost: 29
-Lungime: 3
-Timp solutie: 9ms
-
-----------------
+Numar total de noduri calculate: 
+228

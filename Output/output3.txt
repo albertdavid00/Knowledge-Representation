@@ -1,1 +1,5 @@
-Timpul a expirat. Nu au fost gasite solutii.Nu au fost gasite solutii
+Timpul a expirat. Nu au fost gasite solutii.
+Numarul maxim de noduri in memorie la un moment dat: 7253
+
+Numar total de noduri calculate: 
+7634
