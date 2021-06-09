@@ -173,13 +173,13 @@ class Graph:  # graful problemei
     def FaraSolutie(self) -> bool:
         if self.nod_inutil(gr.start):
             return True
-        for cant, _ in self.final:
-            ok = False
-            for cap_max, c, cul in self.start:
-                if cap_max == cant:
-                    ok = True
-            if not ok:
-                return True
+        # for cant, _ in self.final:
+        #     ok = False
+        #     for cap_max, c, cul in self.start:
+        #         if cap_max == cant:
+        #             ok = True
+        #     if not ok:
+        #         return True
 
         return False
 
@@ -571,7 +571,7 @@ def construieste_drum(gr:Graph, nodCurent:NodParcurgere, limita:int, nrSolutiiCa
     lSuccesori = gr.genereazaSuccesori(nodCurent)
     minim = float('inf')
     for s in lSuccesori:
-        nrSolutiiCautate, rez = construieste_drum(gr, s, limita, nrSolutiiCautate, startTime, nr_noduri + 1)
+        nrSolutiiCautate, rez = construieste_drum(gr, s, limita, nrSolutiiCautate, startTime, nr_noduri + len(lSuccesori))
         if rez == "gata":
             return 0, "gata"
 
@@ -594,7 +594,6 @@ def get_euristica(id:int)->str:
 
 
 if __name__ == "__main__":
-    nr_max_noduri = 1
     print("Introduceti calea catre folderul de intrare:")
     inputFolderPath = input()
     print("Introduceti calea catre folderul de iesire:")
@@ -618,6 +617,8 @@ if __name__ == "__main__":
     outputFiles = [f for f in listdir(outputFolderPath) if isfile(join(outputFolderPath, f))]
     index = 0
     for file in inputFiles:
+        NodParcurgere.counter = 0
+        nr_max_noduri = 1
         inputFilePath = inputFolderPath + "\\" + file
         outputFilePath = outputFolderPath + "\\" + outputFiles[index]
         g = open(outputFilePath, "w")
